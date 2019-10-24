@@ -26,7 +26,10 @@ namespace MvcCookie
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie();
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Account/MakeLogin";
+                });
             services.AddControllersWithViews();
         }
 

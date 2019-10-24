@@ -14,7 +14,7 @@ namespace MvcCookie.Controllers
 {
     public class AccountController : Controller
     {
-        public IActionResult Login()
+        public IActionResult MakeLogin()
         {
             var claims = new List<Claim>{
                 new Claim(ClaimTypes.Name,"Ifan"),
